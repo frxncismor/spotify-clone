@@ -14,7 +14,7 @@
         height: 800px;
         background-size: inherit;
         background-position: center;
-        border-radius: 20px;
+        border-radius: 8px;
         overflow: hidden;
 
         &__login{
@@ -25,6 +25,7 @@
             place-items: center;
             width: calc(53vh);
             min-width: 550px;
+            grid-template-rows: 90% 10%;
 
             .login__logo{
                 position: absolute;
@@ -33,14 +34,14 @@
 
                 h2{
                     color: $primary;
-                    font-size: 15pt;
+                    font-size: 12pt;
                 }
             }
 
             .login__title{
                 text-align: center;
                 margin-bottom: 5rem;
-                font-size: 20pt;
+                font-size: 15pt;
             }
             .login__form{
 
@@ -94,6 +95,20 @@
                         }
                     }
                 }
+            }
+
+            .card__login--signup{
+                p{
+                    font-weight: bold;
+                    a{
+                        text-decoration: none;
+                        color: $primary;
+                        &:hover{
+                            color: $secondary;
+                        }
+                    }
+                }
+
             }
 
         }
