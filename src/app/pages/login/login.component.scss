@@ -1,0 +1,101 @@
+@import '../../../styles.scss';
+.container{
+    background-color: $background;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100vh;
+
+    .card{
+        background-image: url('https://images.pexels.com/photos/1626481/pexels-photo-1626481.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+        display: grid;
+        grid-template-columns: 40% 60%;
+        width: calc(80% - 100px);
+        height: 800px;
+        background-size: inherit;
+        background-position: center;
+        border-radius: 20px;
+        overflow: hidden;
+
+        &__login{
+            background-color: $white;
+            height: 100%;
+            position: relative;
+            display: grid;
+            place-items: center;
+            width: calc(53vh);
+            min-width: 550px;
+
+            .login__logo{
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                h2{
+                    color: $primary;
+                    font-size: 15pt;
+                }
+            }
+
+            .login__title{
+                text-align: center;
+                margin-bottom: 5rem;
+                font-size: 20pt;
+            }
+            .login__form{
+
+                .login__form--group{
+                    padding-bottom: 1rem;
+                    .form__label{
+                        font-size: .8rem;
+                    }
+                    .form__input{
+                        height: 30px;
+                        width: 300px;
+                        border-radius: 5px;
+                        padding: 5px;
+                        font-size: 1rem;
+                        border: 2px solid $background;
+
+                        &:hover{
+                            border: 1px solid black;
+                        }
+                        &:focus{
+                            outline: none;
+                            border: 1px solid black;
+                        }
+                    }
+                }
+
+                .login__form--submit{
+                    height: 40px;
+                    width: 315px;
+                    border-radius: 5px;
+                    font-size: 1rem;
+
+                    .form__button{
+                        width: 100%;
+                        height: 100%;
+                        color: $white;
+                        background-color: $primary;
+                        border: none;
+                        letter-spacing: 1px;
+                        border-radius: 5px;
+                        font-family: $montserrat;
+
+                        &:hover{
+                            color: $primary;
+                            background-color: $white;
+                            border: 2px solid $background;
+                        }
+                        &:focus{
+                            outline: none;
+                            border: 1px solid black;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
