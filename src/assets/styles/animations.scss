@@ -1,0 +1,37 @@
+.signIn{
+    animation-duration: .8s;
+    -webkit-animation-duration: .8s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+    animation-name: signIn;
+    -webkit-animation-name: signIn;
+}
+
+@keyframes signIn{
+    from{
+        width: 53vw;
+    }
+    to {
+        width: 75vw;
+    }
+}
+
+.signOut{
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+    animation-name: signOut;
+    -webkit-animation-name: signOut;
+    animation-timing-function: linear;
+    will-change: transform;
+}
+
+@keyframes signOut{
+    0%{
+        width: 125vh;
+    }
+    100%{
+        width: 50vh;
+    }
+}

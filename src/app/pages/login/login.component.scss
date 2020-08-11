@@ -1,0 +1,70 @@
+@import "../../../styles.scss";
+
+.container {
+    background-color: $background;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100vh;
+
+    .card {
+    background-image: url("https://images.pexels.com/photos/1626481/pexels-photo-1626481.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    display: grid;
+    grid-template-columns: 40% 60%;
+    width: calc(80% - 80px);
+    min-height: 700px;
+    background-size: inherit;
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+
+        &__login {
+            background-color: $white;
+            height: 100%;
+            position: relative;
+            display: grid;
+            place-items: center;
+            width: calc(53vh);
+            min-width: 550px;
+            grid-template-rows: 90% 10%;
+
+            .login__logo {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: flex;
+                @extend .logo;
+            }
+
+            .login__title {
+                text-align: center;
+                margin-bottom: 5rem;
+                font-size: 15pt;
+            }
+
+            .login__form--group {
+                @extend .form--group;
+            }
+
+            .login__form--submit {
+                @extend .form--submit;
+            }
+        }
+
+        .card__login--signup {
+            p {
+                font-weight: 400;
+
+                a {
+                text-decoration: none;
+                color: $primary;
+
+                &:hover {
+                    color: $secondary;
+                }
+                }
+            }
+        }
+    }
+}
+
