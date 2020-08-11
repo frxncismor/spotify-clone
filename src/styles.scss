@@ -1,6 +1,6 @@
 // Imports
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import "./assets/styles/animations.scss";
 // ------------ Atoms ------------
 // Theme colors
 $primary: #ff971d;
@@ -31,6 +31,16 @@ $montserrat: 'Montserrat', sans-serif;
         outline: none;
         border: 1px solid black;
     }
+    &[disabled]{
+        color: $white;
+        background-color: whitesmoke;
+        &:hover{
+            color: $white;
+            background-color: whitesmoke;
+            border: none;
+            cursor: not-allowed;
+        }
+    }
 }
 
 .label {
@@ -44,13 +54,14 @@ $montserrat: 'Montserrat', sans-serif;
     padding: 5px;
     font-size: 1rem;
     border: 2px solid $background;
+    font-family: $montserrat;
 
     &:hover{
-        border: 1px solid black;
+        border: 1px solid $primary;
     }
     &:focus{
         outline: none;
-        border: 1px solid black;
+        border: 1px solid $primary;
     }
 }
 
