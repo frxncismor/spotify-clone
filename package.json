@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test --watch=false --browsers=ChromeHeadlessPuppeteer",
-    "lint": "ng lint",
+    "lintFix": "ng lint --fix",
+    "lintCheck": "ng lint",
     "e2e": "ng e2e"
   },
   "private": true,
