@@ -5,26 +5,23 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-
   user: User = {
     username: '',
-    password: ''
+    password: '',
   };
 
   loginCorrect = true;
   welcomeMessage;
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onSubmit(): void {
     if (this.loginCorrect) {
-
-      console.log('Usuario', this.user);
+      console.log("Usuario", this.user);
       this.signInAnimation();
 
       setTimeout(() => {
@@ -33,7 +30,6 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['/home']);
         }, 700);
       }, 500);
-
     } else {
       this.signOutAnimation();
     }
