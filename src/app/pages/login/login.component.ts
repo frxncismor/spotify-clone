@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit(): void {
     if (this.loginCorrect) {
-      console.log("Usuario", this.user);
+      console.log('Usuario', this.user);
       this.signInAnimation();
 
       setTimeout(() => {
