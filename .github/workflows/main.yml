@@ -26,7 +26,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm install
       - run: npm run build
-      - run: ng lint --fix
-      - run: ng lint
+      - run: npm lintFix
+      - run: npm lintCheck
         env:
           CI: true
