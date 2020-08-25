@@ -1,6 +1,6 @@
-import { User } from './../../interfaces/user';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { User } from '../../../modules/shared/interfaces/user';
 
 @Component({
   selector: 'app-login',
@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit(): void {
     if (this.loginCorrect) {
-      console.log("Usuario", this.user);
+      console.log('Usuario', this.user);
       this.signInAnimation();
 
       setTimeout(() => {
