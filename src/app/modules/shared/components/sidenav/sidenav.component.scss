@@ -1,0 +1,85 @@
+// @import "./../../../../styles.scss";
+.container {
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  background-color: #f9f6f7;
+  .profile {
+    display: grid;
+    place-self: center;
+    .profile__image {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+      margin: 0 auto;
+      margin-top: 15%;
+      img {
+        width: 200px;
+      }
+    }
+    .profile__name {
+      text-align: center;
+    }
+  }
+
+  .options {
+    display: grid;
+    place-self: center;
+    .options__list {
+      list-style: none;
+      display: grid;
+      text-align: center;
+      padding-right: 13%;
+      li {
+        margin: 5% 0 5% 0;
+        a {
+          color: black;
+          width: 100%;
+          padding: 5% 45% 5% 40%;
+          text-decoration: none;
+          &:hover {
+            background-color: #ffe8d6;
+            color: white;
+          }
+          &:active {
+            background-color: #ffe8d6;
+          }
+        }
+      }
+    }
+  }
+  .signout {
+    display: grid;
+    place-self: center;
+    display: grid;
+    place-self: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    .signout__list {
+      list-style: none;
+      display: grid;
+      text-align: center;
+      padding-right: 13%;
+      li {
+        margin: 5% 0 5% 0;
+        a {
+          color: black;
+          width: 100%;
+          padding: 5% 45% 5% 40%;
+          text-decoration: none;
+          &:hover {
+            background-color: #ffe8d6;
+            color: white;
+          }
+          &:active {
+            background-color: #ffe8d6;
+          }
+        }
+      }
+    }
+  }
+}
