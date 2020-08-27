@@ -1,4 +1,8 @@
 {
-    "editor.codeActionsOnSave": null,
-    "editor.formatOnSave": true
+  "editor.codeActionsOnSave": null,
+  "editor.formatOnSave": true,
+"beautify.ignore": "",
+"prettier.jsxSingleQuote": true,
+"prettier.singleQuote": true,
+"prettier.tabWidth": 4
 }

@@ -36,7 +36,7 @@
     "import-spacing": true,
     "indent": {
       "options": [
-        "spaces"
+        "spaces", 2
       ]
     },
     "max-classes-per-file": false,
@@ -99,8 +99,7 @@
       "call-signature"
     ],
     "typedef-whitespace": {
-      "options": [
-        {
+      "options": [{
           "call-signature": "nospace",
           "index-signature": "nospace",
           "parameter": "nospace",

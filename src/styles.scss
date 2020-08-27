@@ -3,12 +3,17 @@
 @import "./assets/styles/animations.scss";
 // ------------ Atoms ------------
 // Theme colors
-$primary: #ff971d;
-$secondary: #ffe8d6;
-$background: #f9f6f7;
+$primary: #ee6f57;
+$secondary: #00334e;
+$tertiary: #145374;
+$background: #f6f5f5;
+$soft: #7889a4;
 $white: #ffffff;
 // Font-families
 $montserrat: "Montserrat", sans-serif;
+// Sizes
+$sidenavWidth: 220px;
+$headerHeight: 70px;
 .button {
   width: 100%;
   height: 100%;
@@ -63,8 +68,6 @@ $montserrat: "Montserrat", sans-serif;
 
 .logo {
   img {
-    filter: invert(69%) sepia(39%) saturate(2950%) hue-rotate(344deg)
-      brightness(101%) contrast(101%);
     height: 30px;
     margin-right: 10px;
     margin-top: 8px;
@@ -75,6 +78,12 @@ $montserrat: "Montserrat", sans-serif;
   }
 }
 
+.page-vision {
+  position: absolute;
+  left: $sidenavWidth;
+  min-height: calc(100vh - $headerHeight);
+  top: $headerHeight;
+}
 // ------------ Molecules ------------
 .form--group {
   padding-bottom: 1rem;
@@ -97,9 +106,12 @@ $montserrat: "Montserrat", sans-serif;
 }
 
 // ------------ Global styles ------------
+
 html,
 body {
-  padding: 0;
+  height: 100%;
+}
+body {
   margin: 0;
   font-family: $montserrat;
 }
