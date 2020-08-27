@@ -23,18 +23,18 @@
         </figure>
         <form
           class="login__form"
-          (ngSubmit)="onSubmit()"
+          (ngSubmit)="Login($event)"
           *ngIf="welcomeMessage !== true"
+          [formGroup]="form"
         >
           <div class="login__form--group">
-            <label class="form__label" for="user">Usuario</label> <br />
+            <label class="form__label" for="email">Email</label> <br />
             <input
-              id="user"
+              id="email"
+              formControlName="email"
               class="form__input"
               type="text"
-              name="user"
-              [(ngModel)]="user.username"
-              required
+              name="email"
             />
           </div>
           <div class="login__form--group">
@@ -44,19 +44,13 @@
               class="form__input"
               type="password"
               name="password"
-              [(ngModel)]="user.password"
-              required
+              formControlName="password"
             />
           </div>
           <div class="login__form--submit">
-            <input
-              class="form__button"
-              type="submit"
-              id="submit"
-              value="Ingresar"
-              (click)="onSubmit()"
-              [disabled]="user.username === '' || user.password === ''"
-            />
+            <button class="form__button" [disabled]="form.invalid">
+              Ingresar
+            </button>
           </div>
         </form>
       </div>
