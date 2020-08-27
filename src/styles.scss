@@ -13,7 +13,7 @@ $white: #ffffff;
 $montserrat: "Montserrat", sans-serif;
 // Sizes
 $sidenavWidth: 220px;
-$headerHeight: 70px;
+$headerHeight: 90px;
 .button {
   width: 100%;
   height: 100%;
@@ -81,8 +81,9 @@ $headerHeight: 70px;
 .page-vision {
   position: absolute;
   left: $sidenavWidth;
-  min-height: calc(100vh - $headerHeight);
-  top: $headerHeight;
+  min-height: calc(100vh - 90px);
+  min-width: calc(100% - 220px);
+  top: 100px;
 }
 // ------------ Molecules ------------
 .form--group {
