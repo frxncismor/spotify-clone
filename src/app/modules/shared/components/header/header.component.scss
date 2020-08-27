@@ -1,0 +1,92 @@
+@import "./../../../../../styles.scss";
+
+:host {
+  @extend .page-vision;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: $white;
+  height: $headerHeight;
+  top: 0;
+  border: 1px solid $background;
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 220px);
+  .searcher {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 23px;
+    width: 250px;
+    justify-content: center;
+    padding-left: 25px;
+    &__input {
+      height: 25px;
+      border: none;
+      @extend .input;
+      &:focus {
+        border-bottom-color: $primary;
+        border-top-color: $white;
+        border-left-color: $white;
+        border-right-color: $white;
+      }
+      &:hover {
+        border-bottom-color: $primary;
+        border-top-color: $white;
+        border-left-color: $white;
+        border-right-color: $white;
+      }
+    }
+    &__button {
+      border: none;
+      background: none;
+      width: 40px;
+      padding: 0;
+      margin-right: 5px;
+      &:focus {
+        transform: scale(1.5);
+        outline: none;
+      }
+      &:hover {
+        transform: scale(1.5);
+      }
+      mat-icon {
+        color: $soft;
+        font-size: 16pt;
+      }
+    }
+  }
+  .profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 25px;
+    padding-left: 25px;
+    text-decoration: none;
+    color: $secondary;
+    &__image {
+      width: 35px;
+      height: 35px;
+      margin: 0 15px 0 0;
+      img {
+        width: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        height: 100%;
+      }
+    }
+    &__name {
+      font-size: medium;
+      font-weight: 500;
+    }
+    &:hover &:focus {
+      background: $background;
+    }
+    &.active {
+      background: $primary;
+      color: $white;
+    }
+  }
+}

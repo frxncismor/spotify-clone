@@ -1,1 +1,18 @@
-<p>header works!</p>
+<nav class="header">
+  <section class="searcher">
+    <button class="searcher__button">
+      <mat-icon> search </mat-icon>
+    </button>
+    <input
+      type="text"
+      class="searcher__input"
+      placeholder="Enter your search request"
+    />
+  </section>
+  <a class="profile" routerLink="/profile" routerLinkActive="active">
+    <figure class="profile__image">
+      <img src="assets/images/profile.jpeg" alt="User picture" />
+    </figure>
+    <span class="profile__name">Mariah Key</span>
+  </a>
+</nav>

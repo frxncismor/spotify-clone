@@ -3,11 +3,24 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { MusicPlayerComponent } from './components/music-player/music-player.component';
+import { MaterialModule } from '../material/material.module';
+import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-const componentes = [HeaderComponent, SidenavComponent, MusicPlayerComponent];
+const SharedComponents = [
+  HeaderComponent,
+  SidenavComponent,
+  MusicPlayerComponent,
+];
 @NgModule({
-  declarations: [componentes],
-  imports: [CommonModule],
-  exports: [componentes],
+  declarations: [SharedComponents],
+  imports: [
+    CommonModule,
+    MaterialModule,
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
+  exports: [SharedComponents],
 })
 export class SharedModule {}

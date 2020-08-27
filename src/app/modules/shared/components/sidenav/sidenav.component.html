@@ -1,1 +1,60 @@
-<p>sidenav works!</p>
+<div class="sidenav">
+  <nav class="sidenav__navigation">
+    <a class="navigation__header" routerLink="/home">
+      <figure class="navigation__header--logo">
+        <img src="https://img.icons8.com/ios-glyphs/30/ee6f57/audio-wave.png" />
+        <h2>Spotify clone</h2>
+      </figure>
+    </a>
+    <!-- <a
+      class="toggle-mob-menu"
+      routerLink="/home"
+      aria-expanded="false"
+      aria-label="open menu"
+    >
+      <mat-icon>home</mat-icon>
+    </a> -->
+    <ul class="navigation__section">
+      <li class="navigation__section--title">
+        <h3>General</h3>
+      </li>
+      <li>
+        <a routerLink="/home" routerLinkActive="active">
+          <mat-icon>home</mat-icon>
+          <span>Home</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/music-player" routerLinkActive="active">
+          <mat-icon>headset</mat-icon>
+          <span>Music Player</span>
+        </a>
+      </li>
+
+      <li class="navigation__section--title">
+        <h3>Me</h3>
+      </li>
+      <li>
+        <a routerLink="/suggested" routerLinkActive="active">
+          <mat-icon>album</mat-icon>
+          <span>Suggested</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/details" routerLinkActive="active">
+          <mat-icon>music_video</mat-icon>
+          <span>Details</span>
+        </a>
+      </li>
+
+      <!-- more list items here -->
+
+      <li>
+        <button (click)="logout()">
+          <mat-icon>login</mat-icon>
+          <span>Salir</span>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</div>
