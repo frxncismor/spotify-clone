@@ -85,6 +85,42 @@ $headerHeight: 90px;
   min-width: calc(100% - 220px);
   top: 100px;
 }
+
+.section__header {
+  width: initial;
+  height: initial;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 40px;
+  display: flex;
+  div {
+    h3 {
+      color: $secondary;
+      letter-spacing: 2px;
+      font-size: 18pt;
+    }
+    p {
+      font-size: 10pt;
+      color: gray;
+      margin-top: -5px;
+    }
+  }
+  button {
+    background: transparent;
+    border: none;
+    &:hover,
+    &:focus {
+      transform: scale(1.3);
+      outline: none;
+      mat-icon {
+        color: $secondary;
+      }
+    }
+    mat-icon {
+      color: $soft;
+    }
+  }
+}
 // ------------ Molecules ------------
 .form--group {
   padding-bottom: 1rem;

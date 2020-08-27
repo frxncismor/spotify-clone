@@ -1,0 +1,39 @@
+<section class="carrousel">
+  <div class="carrousel__container">
+    <div
+      class="carrousel-item"
+      *ngFor="
+        let number of [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18
+        ]
+      "
+    >
+      <img
+        class="carrousel-item__img"
+        src="https://source.unsplash.com/random?music/1600x900"
+        alt="People"
+      />
+      <div class="carrousel-item__details">
+        <p class="carrousel-item__details--title">Cancion del año</p>
+        <p class="carrousel-item__details--subtitle">Childish Gambino</p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -6,11 +6,17 @@ import { MusicPlayerComponent } from './components/music-player/music-player.com
 import { MaterialModule } from '../material/material.module';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SliderComponent } from './components/slider/slider.component';
+import { SonglistComponent } from './components/songlist/songlist.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 const SharedComponents = [
   HeaderComponent,
   SidenavComponent,
   MusicPlayerComponent,
+  SliderComponent,
+  SonglistComponent,
+  CarouselComponent,
 ];
 @NgModule({
   declarations: [SharedComponents],

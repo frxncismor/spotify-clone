@@ -1,0 +1,21 @@
+<section class="wrapper">
+  <mat-card *ngFor="let i of [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]">
+    <ul class="songs__list">
+      <li class="songs__list--song">
+        <span class="song__index">01</span>
+        <figure class="song__image">
+          <img
+            src="https://source.unsplash.com/random?music/1600x900"
+            alt="List image"
+          />
+        </figure>
+        <a class="song__title" [routerLink]="['/details']">My stress</a>
+        <span class="song__artist">NF Real Music</span>
+        <span class="song__duration">3:22</span>
+        <button class="song__add">
+          <mat-icon>queue</mat-icon>
+        </button>
+      </li>
+    </ul>
+  </mat-card>
+</section>
