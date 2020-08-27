@@ -13,7 +13,7 @@ export class SidenavComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  logout() {
+  logout(): void {
     this.router.navigate(['/login']);
   }
 
