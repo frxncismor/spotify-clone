@@ -3,7 +3,7 @@
 :host {
   @extend .page-vision;
   display: grid;
-  grid-template-rows: repeat(5, minmax(150px, 1fr));
+  grid-template-rows: repeat(7, minmax(150px, 1fr));
   grid-template-columns: repeat(4, minmax(250px, 1fr));
   place-self: center;
   margin: 5px auto;
@@ -17,13 +17,55 @@ section {
   background-color: $white;
   width: 100%;
   height: 100%;
-  // border: 1px solid $primary;
   place-self: center;
 }
 
-.playlist {
+.hero {
   grid-column: 1 / span 4;
   grid-row: 1 / span 2;
+  padding-left: 40px;
+  font-family: $montserrat;
+  &__wrapper {
+    background-color: $backgroundTertiary;
+    height: 100%;
+    border-top-left-radius: 250px;
+    border-bottom-left-radius: 250px;
+    padding: 10%;
+    position: relative;
+    &--text {
+      margin-left: 10%;
+      h1 {
+        color: $white;
+        font-size: 50px;
+        font-weight: bold;
+        line-height: 1.5;
+      }
+      p {
+        color: $white;
+        font-size: 21px;
+        font-weight: light;
+        margin: 0;
+      }
+    }
+    &--image {
+      position: absolute;
+      min-width: 55%;
+      max-height: 136%;
+      right: 0;
+      z-index: 2;
+      overflow: hidden;
+      bottom: -16px;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.playlist {
+  padding-top: 20px;
+  grid-column: 1 / span 4;
+  grid-row: 3 / span 2;
 
   &__header {
     @extend .section__header;
@@ -33,7 +75,7 @@ section {
 
 .songs {
   grid-column: 1 / span 2;
-  grid-row: 3 / span 3;
+  grid-row: 5 / span 3;
 
   &__header {
     @extend .section__header;
@@ -43,7 +85,7 @@ section {
 
 .suggested {
   grid-column: 3 / span 2;
-  grid-row: 3 / span 3;
+  grid-row: 5 / span 3;
 
   &__header {
     @extend .section__header;
@@ -51,6 +93,6 @@ section {
   }
   &__content {
     margin-left: 40px;
-    width: 95%;
+    width: 94%;
   }
 }
