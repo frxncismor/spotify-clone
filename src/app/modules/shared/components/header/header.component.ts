@@ -7,7 +7,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  genres = [
+    { name: 'Ambient' },
+    { name: 'Rock' },
+    { name: 'Electronic' },
+    { name: 'Hip-hop' },
+    { name: 'Experimental' },
+    { name: 'Acustic' },
+    { name: 'Reggae' },
+    { name: 'Jazz' },
+    { name: 'Funk' },
+    { name: 'Pop' },
+    { name: 'Ballad' },
+    { name: 'Other' },
+  ];
   constructor(private router: Router) {}
-
   ngOnInit(): void {}
 }

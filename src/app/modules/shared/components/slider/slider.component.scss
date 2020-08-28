@@ -1,14 +1,15 @@
-.minimize {
-  //   width: 750%;
-  //   margin: 0 auto;
-}
+@import "./../../../../../styles.scss";
 .carousel {
   width: 95%;
-}
-.carousel-item {
-  //   height: 420px;
-  img {
-    height: 435px;
-    object-fit: cover;
+  font-family: $montserrat;
+  &-inner {
+    box-shadow: $boxShadow;
+    border-radius: 30px;
+    .carousel-item {
+      img {
+        height: 435px;
+        object-fit: cover;
+      }
+    }
   }
 }

@@ -9,6 +9,10 @@
       placeholder="Enter your search request"
     />
   </section>
+
+  <mat-chip-list class="searcher__chips" aria-label="Fish selection">
+    <mat-chip *ngFor="let genre of genres">{{ genre.name }}</mat-chip>
+  </mat-chip-list>
   <a class="profile" routerLink="/profile" routerLinkActive="active">
     <figure class="profile__image">
       <img src="assets/images/profile.jpeg" alt="User picture" />

@@ -6,6 +6,7 @@
 }
 .sidenav {
   position: fixed;
+  border-top: 4px solid $primary;
   top: 0;
   left: 0;
   right: 0;
@@ -13,7 +14,7 @@
   overflow: auto;
   padding-top: 20px;
   width: $sidenavWidth;
-  color: $tertiary;
+  color: $textPrimary;
   background: $background;
 
   &__navigation {
@@ -31,6 +32,7 @@
         max-width: 100%;
         h2 {
           padding-top: 8px;
+          font-family: $montserrat;
         }
       }
     }
@@ -46,7 +48,9 @@
           letter-spacing: 0.15em;
           font-size: 12px;
           margin-top: 12px;
-          color: $soft;
+          color: $subtitle;
+          font-weight: 700;
+          font-family: $montserrat;
         }
       }
 
@@ -81,22 +85,29 @@
             background: $primary;
             color: $background;
             outline: none;
+            mat-icon {
+              color: $white;
+            }
+            span {
+              color: $white;
+              font-weight: 500;
+            }
           }
 
           mat-icon {
-            color: inherit;
+            color: rgba(0, 0, 0, 0.5);
             margin-right: 10px;
           }
 
           span {
-            color: inherit;
+            color: $subtitle;
           }
         }
 
         button {
           background: none;
           padding-left: 60px;
-          color: inherit;
+          color: $subtitle;
           cursor: pointer;
           border: none;
           display: flex;
@@ -114,6 +125,14 @@
             background: $primary;
             color: $background;
             outline: none;
+            font-weight: 500;
+            mat-icon {
+              color: $white;
+            }
+            // span {
+            //   color: $white;
+
+            // }
           }
 
           mat-icon {

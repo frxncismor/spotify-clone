@@ -27,6 +27,7 @@ section {
 
   &__header {
     @extend .section__header;
+    margin-bottom: -10px;
   }
 }
 

@@ -9,6 +9,14 @@ $tertiary: #145374;
 $background: #f6f5f5;
 $soft: #7889a4;
 $white: #ffffff;
+$backgroundPrimary: hsl(24, 20%, 95%);
+$backgroundSecondary: hsl(24, 21%, 93%);
+$backgroundTertiary: hsl(24, 9%, 82%);
+$textSecondary: hsl(24, 12%, 30%);
+$textPrimary: hsl(24, 24%, 11%);
+$subtitle: hsl(214, 7%, 47%);
+$boxShadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+$borderHeader: 1px solid #eaeaea;
 // Font-families
 $montserrat: "Montserrat", sans-serif;
 // Sizes
@@ -31,7 +39,7 @@ $headerHeight: 90px;
   }
   &:focus {
     outline: none;
-    border: 1px solid black;
+    box-shadow: $boxShadow;
   }
   &[disabled] {
     color: $white;
@@ -57,12 +65,14 @@ $headerHeight: 90px;
   font-size: 1rem;
   border: 2px solid $background;
   font-family: $montserrat;
+  color: $textPrimary;
   &:hover {
     border: 1px solid $primary;
   }
   &:focus {
     outline: none;
     border: 1px solid $primary;
+    box-shadow: $boxShadow;
   }
 }
 
@@ -75,6 +85,7 @@ $headerHeight: 90px;
   h2 {
     color: $primary;
     font-size: 12pt;
+    font-family: $montserrat;
   }
 }
 
@@ -95,14 +106,18 @@ $headerHeight: 90px;
   display: flex;
   div {
     h3 {
-      color: $secondary;
-      letter-spacing: 2px;
-      font-size: 18pt;
+      color: $textPrimary;
+      font-weight: bold;
+      letter-spacing: 1px;
+      font-size: 20px;
+      font-family: $montserrat;
     }
     p {
-      font-size: 10pt;
-      color: gray;
+      font-size: 14px;
+      color: $subtitle;
       margin-top: -5px;
+      font-weight: light;
+      font-family: $montserrat;
     }
   }
   button {
