@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { User } from '../../../modules/shared/interfaces/user';
 import { LoginService } from '../../../modules/core/services/login.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -10,14 +9,15 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  user: User;
   welcomeMessage;
+  form: FormGroup;
+
   constructor(
     private router: Router,
     private loginService: LoginService,
     private formBuilder: FormBuilder
   ) {}
-  form: FormGroup;
+
   ngOnInit(): void {
     this.buildForm();
   }
@@ -27,9 +27,17 @@ export class LoginComponent implements OnInit {
     if (this.form.valid) {
       const value = this.form.value;
       console.log(value);
-      this.loginService.Login(value.email, value.password).subscribe((resp) => {
-        console.log(resp);
-      });
+      setTimeout(() => {
+        this.signInAnimation();
+        this.welcomeMessage = true;
+        setTimeout(() => {
+          this.router.navigate(['/home']);
+        }, 500);
+      }, 300);
+      // this.loginService.Login(value.email, value.password).subscribe((resp) => {
+      //   this.signInAnimation();
+      //   console.log(resp);
+      // });
     } else {
       this.signOutAnimation();
     }
