@@ -27,6 +27,6 @@ const SharedComponents = [
     FormsModule,
     ReactiveFormsModule,
   ],
-  exports: [SharedComponents, ReactiveFormsModule],
+  exports: [SharedComponents, ReactiveFormsModule, MaterialModule],
 })
 export class SharedModule {}

@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  dropDown = true;
   genres = [
     { name: 'Ambient' },
     { name: 'Rock' },
@@ -23,4 +24,16 @@ export class HeaderComponent implements OnInit {
   ];
   constructor(private router: Router) {}
   ngOnInit(): void {}
+  dropGenres(): void {
+    const dropDown = document.querySelector('.searcher__chips');
+    dropDown.classList.toggle('active');
+    if (this.dropDown === true) {
+      this.dropDown = false;
+    } else if (this.dropDown === false) {
+      this.dropDown = true;
+    }
+  }
+  getGenre(genre): void {
+    console.log(genre);
+  }
 }

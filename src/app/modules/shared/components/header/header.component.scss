@@ -1,5 +1,26 @@
 @import "./../../../../../styles.scss";
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $secondary;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $primary;
+}
+
 :host {
   @extend .page-vision;
 }
@@ -49,28 +70,73 @@
       width: 40px;
       padding: 0;
       margin-right: 5px;
+      height: 24px;
       &:focus {
-        transform: scale(1.5);
+        mat-icon {
+          color: $primary;
+        }
         outline: none;
       }
       &:hover {
-        transform: scale(1.5);
+        mat-icon {
+          color: $primary;
+        }
       }
-      mat-icon {
+      &--search {
         color: $soft;
         font-size: 16pt;
       }
+      &--dropdown {
+        color: $soft;
+        font-size: 20pt;
+      }
     }
     &__chips {
-      display: flex;
-      mat-chip {
-        color: $white;
-        background: $primary;
-        &:nth-child(odd) {
-          background: $secondary;
-        }
-        &:nth-child(even) {
-          background: $tertiary;
+      display: none;
+      position: absolute;
+      overflow: scroll;
+      background-color: white;
+      width: 265px;
+      height: 200px;
+      top: 60px;
+      left: 68px;
+      overflow-x: hidden;
+      box-shadow: $boxShadow;
+      border-radius: 20px;
+      border-top-right-radius: unset;
+      border-bottom-right-radius: unset;
+      font-family: $montserrat;
+      &.active {
+        display: block;
+      }
+      p {
+        background: $tertiary;
+        color: white;
+        text-align: center;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+        li {
+          button {
+            width: 100%;
+            border: none;
+            background: transparent;
+            &:focus {
+              outline: none;
+              background: $primary;
+              color: white;
+            }
+          }
+          &:hover {
+            cursor: pointer;
+            background-color: rgb(238, 111, 87, 0.1);
+            &:focus {
+              background-color: $white;
+              box-shadow: $boxShadow;
+            }
+          }
         }
       }
     }

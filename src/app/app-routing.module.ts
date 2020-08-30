@@ -43,6 +43,13 @@ const routes: Routes = [
         loadChildren: () =>
           import('./pages/player/player.module').then((m) => m.PlayerModule),
       },
+      {
+        path: 'my-music',
+        loadChildren: () =>
+          import('./pages/my-music/my-music.module').then(
+            (m) => m.MyMusicModule
+          ),
+      },
     ],
   },
   { path: '**', component: NotFoundComponent },

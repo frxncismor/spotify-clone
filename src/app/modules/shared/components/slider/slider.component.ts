@@ -14,7 +14,7 @@ export class SliderComponent implements OnInit {
     },
     {
       title: 'New song',
-      artist: 'RawArtist',
+      artist: 'hey',
       url: 'https://source.unsplash.com/random?music/1600x900',
     },
     {

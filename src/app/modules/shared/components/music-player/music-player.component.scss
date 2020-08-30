@@ -1,0 +1,116 @@
+@import "./../../../../../styles.scss";
+:host {
+  @extend .page-vision;
+  min-height: unset;
+  min-width: unset;
+}
+.music-player {
+  position: fixed;
+  width: 100%;
+  background-color: $white;
+  height: $musicPlayerHeight;
+  bottom: 0;
+  border-top: $borderHeader;
+  display: flex;
+  justify-content: space-between;
+  width: calc(100% - 220px);
+  z-index: 1;
+  &__song {
+    display: flex;
+    flex-direction: row;
+    &--image {
+      display: inherit;
+      align-items: center;
+      margin: 0 0 0 30px;
+      height: 100%;
+      width: 100px;
+      img {
+        box-shadow: $boxShadow;
+        width: 80px;
+        height: 70px;
+        border-radius: 15px;
+      }
+    }
+    &--description {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      margin-top: 15px;
+      width: 160px;
+      a {
+        font-size: 20px;
+        line-height: 0.9;
+        font-weight: 600;
+        color: $textPrimary;
+        &:hover {
+          text-decoration: none;
+          color: $primary;
+        }
+      }
+      p {
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+  }
+  &__controls {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    align-items: center;
+    justify-content: space-around;
+    &--play {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 100%;
+      width: 150px;
+      button {
+        border: none;
+        background: transparent;
+        padding: 0;
+        height: 24px;
+        margin: 0;
+        &:hover,
+        &:focus {
+          outline: none;
+          .arrow {
+            color: $primary;
+          }
+          .play {
+            color: $primary;
+          }
+        }
+      }
+      .arrow {
+        color: $secondary;
+      }
+      .play {
+        transform: scale(1.5);
+        color: $secondary;
+      }
+    }
+    &--progressbar {
+      span {
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 13px;
+      }
+      mat-slider {
+        width: 300px;
+        margin: 0 5px;
+      }
+    }
+    &--volume {
+      width: 15%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      mat-icon {
+        font-size: 15pt;
+        margin-top: 5px;
+        color: rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+}

@@ -1,1 +1,23 @@
-<p>player works!</p>
+<div class="player">
+  <figure class="player__song">
+    <img
+      src="https://source.unsplash.com/random?music/1600x900"
+      alt="Current song image"
+    />
+  </figure>
+  <div class="player__information">
+    <h1>Song name</h1>
+    <p>artist name</p>
+  </div>
+  <section class="player__controls">
+    <div class="player__controls--progressbar">
+      <span>02:34</span><mat-slider color="primary"></mat-slider
+      ><span>03:34</span>
+    </div>
+    <div class="player__controls--play">
+      <button><mat-icon class="arrow">skip_previous</mat-icon></button>
+      <button><mat-icon class="play">play_circle_filled</mat-icon></button>
+      <button><mat-icon class="arrow">skip_next</mat-icon></button>
+    </div>
+  </section>
+</div>

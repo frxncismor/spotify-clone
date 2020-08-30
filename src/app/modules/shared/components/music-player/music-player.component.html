@@ -1,1 +1,29 @@
-<p>music-player works!</p>
+<nav class="music-player">
+  <section class="music-player__song">
+    <figure class="music-player__song--image">
+      <img
+        src="https://source.unsplash.com/random?music/1600x900"
+        alt="Current song image"
+      />
+    </figure>
+    <div class="music-player__song--description">
+      <a routerLink="/music-player">Song name</a>
+      <p>Artist name</p>
+    </div>
+  </section>
+  <section class="music-player__controls">
+    <div class="music-player__controls--play">
+      <button><mat-icon class="arrow">skip_previous</mat-icon></button>
+      <button><mat-icon class="play">play_circle_filled</mat-icon></button>
+      <button><mat-icon class="arrow">skip_next</mat-icon></button>
+    </div>
+    <div class="music-player__controls--progressbar">
+      <span>02:34</span><mat-slider color="primary"></mat-slider
+      ><span>03:34</span>
+    </div>
+    <div class="music-player__controls--volume">
+      <mat-icon>volume_up</mat-icon>
+      <mat-slider color="primary"></mat-slider>
+    </div>
+  </section>
+</nav>
