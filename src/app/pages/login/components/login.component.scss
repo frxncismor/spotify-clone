@@ -43,7 +43,7 @@
         margin-bottom: 0;
         @extend .logo;
         margin-left: 8px;
-        width: 130px;
+        width: 145px;
         justify-content: space-between;
         img {
           margin: 0;
@@ -57,6 +57,13 @@
         text-align: center;
         margin-bottom: 5rem;
         font-size: 15pt;
+      }
+
+      .login__error {
+        position: absolute;
+        top: 80px;
+        right: 0px;
+        left: 46px;
       }
 
       .login__form--group {

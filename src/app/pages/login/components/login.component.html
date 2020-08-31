@@ -14,6 +14,7 @@
         <h1 class="login__title" *ngIf="welcomeMessage == true">
           ¡Bienvenido!
         </h1>
+        <mat-error class="login__error">{{ errorMessage }}</mat-error>
         <figure class="login__animation">
           <img
             src="../../../assets/images/loading.gif"
@@ -36,6 +37,14 @@
               type="text"
               name="email"
             />
+            <div *ngIf="emailField.errors && emailField.dirty">
+              <mat-error *ngIf="emailField.hasError('required')"
+                >El campo es requerido</mat-error
+              >
+              <mat-error *ngIf="emailField.hasError('email')"
+                >Ingrese un email valido</mat-error
+              >
+            </div>
           </div>
           <div class="login__form--group">
             <label class="form__label" for="password">Contraseña</label> <br />
@@ -46,6 +55,11 @@
               name="password"
               formControlName="password"
             />
+            <div *ngIf="passwordField.errors && passwordField.dirty">
+              <mat-error *ngIf="passwordField.hasError('required')"
+                >El campo es requerido</mat-error
+              >
+            </div>
           </div>
           <div class="login__form--submit">
             <button class="form__button" [disabled]="form.invalid">

@@ -13,9 +13,13 @@ export class LoginService {
     return this.http.post(`${environment.api_url}/auth/signup`, user);
   }
 
-  Login(email: string, password: string): any {
+  login(email: string, password: string): any {
     console.log(email, password);
     const user = { email, password };
     return this.http.post(`${environment.api_url}/auth/login`, user);
+  }
+
+  getCurrentUser(): any {
+    return this.http.get(`${environment.api_url}/auth/current-user`);
   }
 }

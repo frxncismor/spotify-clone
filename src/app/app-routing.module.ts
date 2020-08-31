@@ -1,16 +1,9 @@
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
-import { SignupComponent } from './pages/signup/signup.component';
 import { LayoutComponent } from './pages/layout/layout.component';
 
 const routes: Routes = [
-  {
-    path: 'login',
-    loadChildren: () =>
-      import('./pages/login/login.module').then((m) => m.LoginModule),
-  },
-  { path: 'signup', component: SignupComponent },
   {
     path: '',
     component: LayoutComponent,
@@ -51,6 +44,16 @@ const routes: Routes = [
           ),
       },
     ],
+  },
+  {
+    path: 'login',
+    loadChildren: () =>
+      import('./pages/login/login.module').then((m) => m.LoginModule),
+  },
+  {
+    path: 'signup',
+    loadChildren: () =>
+      import('./pages/signup/signup.module').then((m) => m.SignupModule),
   },
   { path: '**', component: NotFoundComponent },
 ];

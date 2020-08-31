@@ -11,6 +11,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class LoginComponent implements OnInit {
   welcomeMessage;
   form: FormGroup;
+  errorMessage;
 
   constructor(
     private router: Router,
@@ -31,13 +32,27 @@ export class LoginComponent implements OnInit {
         this.signInAnimation();
         this.welcomeMessage = true;
         setTimeout(() => {
-          this.router.navigate(['/home']);
+          this.loginService.login(value.email, value.password).subscribe(
+            (resp) => {
+              console.log('resp', resp);
+              if (resp.error === false) {
+                this.signInAnimation();
+                this.router.navigate(['/home']);
+              } else {
+                this.signOutAnimation();
+                this.welcomeMessage = false;
+                this.errorMessage = resp.message;
+              }
+            },
+            (err) => {
+              console.log('HTTP Error', err);
+            },
+            () => {
+              console.log('HTTP request completed.');
+            }
+          );
         }, 500);
       }, 300);
-      // this.loginService.Login(value.email, value.password).subscribe((resp) => {
-      //   this.signInAnimation();
-      //   console.log(resp);
-      // });
     } else {
       this.signOutAnimation();
     }
@@ -57,8 +72,14 @@ export class LoginComponent implements OnInit {
 
   private buildForm(): void {
     this.form = this.formBuilder.group({
-      email: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]],
     });
+  }
+  get emailField() {
+    return this.form.get('email');
+  }
+  get passwordField() {
+    return this.form.get('password');
   }
 }
