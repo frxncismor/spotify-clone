@@ -26,7 +26,7 @@ export class SignupComponent implements OnInit {
     if (this.form.valid) {
       const user = this.form.value;
       console.log(user);
-      this.loginService.createUser(user).subscribe(
+      this.loginService.register(user).subscribe(
         (resp) => {
           console.log('resp', resp);
           if (resp.error === false) {

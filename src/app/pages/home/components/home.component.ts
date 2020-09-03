@@ -10,8 +10,11 @@ export class HomeComponent implements OnInit {
   constructor(private loginService: LoginService) {}
 
   ngOnInit(): void {
+    this.getCurrentUser();
+  }
+  getCurrentUser(): void {
     this.loginService.getCurrentUser().subscribe((user) => {
-      console.log(user);
+      console.log('getCurrentUser response', user);
     });
   }
 }

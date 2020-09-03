@@ -27,17 +27,17 @@ export class LoginComponent implements OnInit {
     event.preventDefault();
     if (this.form.valid) {
       const value = this.form.value;
-      console.log(value);
       setTimeout(() => {
         this.signInAnimation();
         this.welcomeMessage = true;
         setTimeout(() => {
           this.loginService.login(value.email, value.password).subscribe(
             (resp) => {
-              console.log('resp', resp);
+              console.log('Response login', resp);
               if (resp.error === false) {
                 this.signInAnimation();
                 this.router.navigate(['/home']);
+                this.loginService.setToken(resp.message.userId);
               } else {
                 this.signOutAnimation();
                 this.welcomeMessage = false;
