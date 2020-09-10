@@ -122,21 +122,6 @@ $headerHeight: 90px;
       font-family: $montserrat;
     }
   }
-  button {
-    background: transparent;
-    border: none;
-    &:hover,
-    &:focus {
-      transform: scale(1.3);
-      outline: none;
-      mat-icon {
-        color: $secondary;
-      }
-    }
-    mat-icon {
-      color: $soft;
-    }
-  }
 }
 // ------------ Molecules ------------
 .form--group {

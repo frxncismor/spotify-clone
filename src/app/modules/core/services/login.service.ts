@@ -26,7 +26,6 @@ export class LoginService {
 
   getCurrentUser(): Observable<any> {
     const token = this.getToken();
-    console.log('getCurrentUser token', token);
     return this.http.get(`${environment.api_url}/auth/current-user/${token}`);
   }
 

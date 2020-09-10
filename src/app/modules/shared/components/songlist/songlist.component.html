@@ -1,20 +1,71 @@
 <section class="wrapper">
-  <mat-card *ngFor="let i of [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]">
+  <mat-card *ngFor="let song of songs; let i = index">
     <ul class="songs__list">
       <li class="songs__list--song">
-        <span class="song__index">01</span>
+        <span class="song__index">{{ i }}</span>
         <figure class="song__image">
           <img
             src="https://source.unsplash.com/random?music/1600x900"
             alt="List image"
           />
         </figure>
-        <a class="song__title" [routerLink]="['/details']">My stress</a>
-        <span class="song__artist">NF Real Music</span>
-        <span class="song__duration">3:22</span>
-        <button class="song__add">
+        <a class="song__title" [routerLink]="['/details']"
+          >{{ song.song | slice: 0:10 }}...</a
+        >
+        <span class="song__artist">{{ song.artist }}</span>
+        <span class="song__duration">{{ song.duration }}</span>
+        <button
+          class="song__add"
+          type="button"
+          data-toggle="modal"
+          data-target="#exampleModal"
+        >
           <mat-icon>queue</mat-icon>
         </button>
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Selecciona la playlist
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <ul>
+                  <li *ngFor="let playlist of playlists">
+                    <button (click)="addToPlaylist(playlist._id, song._id)">
+                      {{ playlist.alias }}
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </li>
     </ul>
   </mat-card>

@@ -1,1 +1,86 @@
-<p>my-music works!</p>
+<section class="playlist">
+  <section class="playlist__header">
+    <div class="playlist__header--title">
+      <h3>My playlists</h3>
+      <p>{{ playlistsLength }} positions</p>
+      <!-- Button trigger modal -->
+      <button
+        type="button"
+        class="playlist__header--button"
+        data-toggle="modal"
+        data-target="#staticBackdrop"
+      >
+        Create playlist
+      </button>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-backdrop="static"
+        data-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">
+                Name your playlist
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <input type="text" [(ngModel)]="playlistName" />
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                (click)="createPlaylist(playlistName)"
+              >
+                Create
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="carrousel">
+    <div class="carrousel__container">
+      <a
+        [routerLink]="['/details/', playlist._id]"
+        class="carrousel-item"
+        *ngFor="let playlist of playlists"
+      >
+        <img
+          class="carrousel-item__img"
+          src="https://source.unsplash.com/random?music/1600x900"
+          alt="People"
+        />
+        <div class="carrousel-item__details">
+          <h3 class="carrousel-item__details--title">
+            {{ playlist.alias | slice: 0:20 }}
+          </h3>
+          <p class="carrousel-item__details--subtitle"></p>
+        </div>
+      </a>
+    </div>
+  </section>
+</section>

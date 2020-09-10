@@ -1,1 +1,14 @@
-<p>details works!</p>
+<section class="songs" *ngIf="playlist">
+  <section class="songs__header">
+    <div class="songs__header--title">
+      <h3>{{ playlist.alias }}</h3>
+      <p>{{ playlistLength }} songs</p>
+    </div>
+    <!-- <button class="songs__header--more">
+          <mat-icon>more_vert</mat-icon>
+        </button> -->
+  </section>
+  <section class="songs__content">
+    <app-songlist [songs]="songs"></app-songlist>
+  </section>
+</section>

@@ -110,3 +110,30 @@ mat-card {
     }
   }
 }
+.modal-body {
+  ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    li {
+      button {
+        width: 100%;
+        border: none;
+        background: transparent;
+        &:focus {
+          outline: none;
+          background: $primary;
+          color: white;
+        }
+      }
+      &:hover {
+        cursor: pointer;
+        background-color: rgb(238, 111, 87, 0.1);
+        &:focus {
+          background-color: $white;
+          box-shadow: $boxShadow;
+        }
+      }
+    }
+  }
+}

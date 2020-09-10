@@ -3,3 +3,13 @@
 :host {
   @extend .page-vision;
 }
+
+.songs {
+  grid-column: 1 / span 2;
+  grid-row: 5 / span 3;
+
+  &__header {
+    @extend .section__header;
+    margin: 10px 0px 10px 40px;
+  }
+}

@@ -1,7 +1,7 @@
 <section class="hero">
   <div class="hero__wrapper">
     <div class="hero__wrapper--text">
-      <p>Mariah Key</p>
+      <p>{{ name }} {{ lastname }}</p>
       <h1>Welcome!</h1>
     </div>
     <figure class="hero__wrapper--image">
@@ -22,14 +22,11 @@
   <section class="songs__header">
     <div class="songs__header--title">
       <h3>Most popular songs</h3>
-      <p>30 songs</p>
+      <p>{{ songsLength }} songs</p>
     </div>
-    <!-- <button class="songs__header--more">
-      <mat-icon>more_vert</mat-icon>
-    </button> -->
   </section>
   <section class="songs__content">
-    <app-songlist></app-songlist>
+    <app-songlist [songs]="songs"></app-songlist>
   </section>
 </section>
 <section class="suggested">
