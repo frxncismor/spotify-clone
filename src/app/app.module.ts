@@ -7,7 +7,8 @@ import { LayoutComponent } from './pages/layout/layout.component';
 import { SharedModule } from './modules/shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
-
+import * as bootstrap from 'bootstrap';
+import * as $ from 'jquery';
 @NgModule({
   declarations: [AppComponent, LayoutComponent],
   imports: [

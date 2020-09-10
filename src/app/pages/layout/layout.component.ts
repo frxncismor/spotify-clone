@@ -15,7 +15,7 @@ export class LayoutComponent implements OnInit {
   }
 
   getCurrentUser(): any {
-    this.user = this.loginService.getCurrentUser().subscribe((res) => {
+    this.loginService.getCurrentUser().subscribe((res) => {
       this.user = res.message;
     });
   }
